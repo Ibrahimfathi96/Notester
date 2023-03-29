@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/animation.dart';
 
 class Note {
   String title;

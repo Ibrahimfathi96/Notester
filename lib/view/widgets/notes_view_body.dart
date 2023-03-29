@@ -5,7 +5,7 @@ import '../../models/note_model.dart';
 
 class NotesViewBody extends StatelessWidget {
   NotesViewBody({Key? key}) : super(key: key);
-  List<NoteItemWidget> notes = [
+  final List<NoteItemWidget> notes = [
     NoteItemWidget(
       note: Note(
           title: 'Flutter Tips',

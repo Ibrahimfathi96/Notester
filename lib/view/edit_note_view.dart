@@ -9,19 +9,13 @@ class EditNoteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
         elevation: 0,
         backgroundColor: Colors.transparent,
         title: const Text(
-          'Notes',
+          'Edit Note',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.w300),
         ),
-        actions: [
+        actions: const [
           CustomSearchIcon(
             iconData: Icons.check,
           )

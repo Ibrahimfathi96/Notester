@@ -12,8 +12,12 @@ class NoteItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const EditNoteView(),));
+      onTap: () {
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const EditNoteView(),
+            ));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 8),
@@ -38,42 +42,43 @@ class NoteItemWidget extends StatelessWidget {
             ],
           ),
           child: Container(
-              padding: const EdgeInsets.all(12),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: note.color, borderRadius: BorderRadius.circular(20)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: Text(
-                      note.title,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 26,
-                          color: Colors.black),
-                    ),
+            padding: const EdgeInsets.all(12),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: note.color, borderRadius: BorderRadius.circular(20)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12.0),
+                  child: Text(
+                    note.title,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 26,
+                        color: Colors.black),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 6.0),
-                    child: Text(
-                      note.description,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 20,
-                          color: Colors.black54),
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 6.0),
+                  child: Text(
+                    note.description,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 20,
+                        color: Colors.black54),
                   ),
-                  Text(note.dateTime.toString(),
-                      textAlign: TextAlign.end,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 16,
-                          color: Colors.black54))
-                ],
-              )),
+                ),
+                Text(note.dateTime.toString(),
+                    textAlign: TextAlign.end,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 16,
+                        color: Colors.black54))
+              ],
+            ),
+          ),
         ),
       ),
     );
