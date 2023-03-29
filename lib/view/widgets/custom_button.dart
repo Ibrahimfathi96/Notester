@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:notester/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({Key? key, required this.onTap}) : super(key: key);
+  const ButtonWidget({Key? key, required this.onTap, this.isLoading = false}) : super(key: key);
   final void Function() onTap;
+  final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -15,8 +16,12 @@ class ButtonWidget extends StatelessWidget {
           color: kPrimaryColor,
           borderRadius: BorderRadius.circular(10)
         ),
-        child: const Center(
-          child: Text('ADD',
+        child: Center(
+          child:
+          isLoading ? const CircularProgressIndicator(
+            color: Colors.black,
+          ):
+          const Text('ADD',
             style: TextStyle(
               color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold
             ),
