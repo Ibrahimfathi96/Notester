@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:notester/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({Key? key, this.onTap}) : super(key: key);
-  final void Function()? onTap;
+  const ButtonWidget({Key? key, required this.onTap}) : super(key: key);
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
