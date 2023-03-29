@@ -3,7 +3,7 @@ import 'package:notester/view/widgets/custom_search_icon.dart';
 import 'package:notester/view/widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
-  const NotesView({Key? key}) : super(key: key);
+   NotesView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class NotesView extends StatelessWidget {
           CustomSearchIcon()
         ],
       ),
-      body: const NotesViewBody(),
+      body: NotesViewBody(),
     );
   }
 }
