@@ -18,8 +18,8 @@ class NotesView extends StatelessWidget {
             fontSize: 28,fontWeight: FontWeight.w300
           ),
         ),
-        actions: const [
-          CustomSearchIcon()
+        actions: [
+          CustomSearchIcon(iconData: Icons.search_outlined,)
         ],
       ),
       body: NotesViewBody(),
