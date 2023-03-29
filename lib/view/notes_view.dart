@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notester/constants.dart';
 import 'package:notester/view/widgets/add_note_bottom_sheet.dart';
 import 'package:notester/view/widgets/custom_search_icon.dart';
 import 'package:notester/view/widgets/notes_view_body.dart';
@@ -23,12 +24,13 @@ class NotesView extends StatelessWidget {
       ),
       body: NotesViewBody(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimaryColor,
         onPressed: () {
           showModalBottomSheet(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(25) ,
-                topRight: Radius.circular(25)
+                topLeft: Radius.circular(20) ,
+                topRight: Radius.circular(20)
               )
             ),
             context: context, builder: (context) {
