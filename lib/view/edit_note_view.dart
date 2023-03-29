@@ -19,7 +19,7 @@ class EditNoteView extends StatelessWidget {
         actions:  [
           CustomAppBarIcon(
             onPressed: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NotesView(),));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NotesView(),));
             },
             iconData: Icons.check,
           )

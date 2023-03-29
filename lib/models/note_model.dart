@@ -1,11 +1,17 @@
 
-import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+part 'note_model.g.dart';
 
-class NoteMD {
+@HiveType(typeId: 7)
+class NoteMD extends HiveObject{
+  @HiveField(0)
   final String title;
+  @HiveField(1)
   final String content;
+  @HiveField(2)
   final String dateTime;
-  final Color color;
+  @HiveField(3)
+  final int color;
 
   NoteMD(
       {required this.title,

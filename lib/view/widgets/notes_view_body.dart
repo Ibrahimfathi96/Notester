@@ -12,7 +12,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: const Color(0xffFFCC80)),
+          color: 0xffFFCC80),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -20,7 +20,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.yellowAccent),
+          color: 0xffFFFF00),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -28,7 +28,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.greenAccent),
+          color: 0xff69F0AE),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -36,7 +36,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.greenAccent),
+          color: 0xff69F0AE),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -44,7 +44,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.greenAccent),
+          color: 0xff69F0AE),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -52,7 +52,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.greenAccent),
+          color: 0xff69F0AE),
     ),
     NoteItemWidget(
       note: NoteMD(
@@ -60,7 +60,7 @@ class NotesViewBody extends StatelessWidget {
           content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
-          color: Colors.greenAccent),
+          color: 0xff69F0AE),
     ),
   ];
   @override
