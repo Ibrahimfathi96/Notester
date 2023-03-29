@@ -1,14 +1,15 @@
-import 'package:flutter/animation.dart';
 
-class Note {
-  String title;
-  String description;
-  String dateTime;
-  Color color;
+import 'package:flutter/material.dart';
 
-  Note(
+class NoteMD {
+  final String title;
+  final String content;
+  final String dateTime;
+  final Color color;
+
+  NoteMD(
       {required this.title,
-      required this.description,
+      required this.content,
       required this.dateTime,
       required this.color});
 }

@@ -6,7 +6,7 @@ import 'package:notester/view/edit_note_view.dart';
 import '../../models/note_model.dart';
 
 class NoteItemWidget extends StatelessWidget {
-  final Note note;
+  final NoteMD note;
   const NoteItemWidget({Key? key, required this.note}) : super(key: key);
 
   @override
@@ -63,7 +63,7 @@ class NoteItemWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 6.0),
                   child: Text(
-                    note.description,
+                    note.content,
                     style: const TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 20,

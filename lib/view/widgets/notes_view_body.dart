@@ -7,57 +7,57 @@ class NotesViewBody extends StatelessWidget {
   NotesViewBody({Key? key}) : super(key: key);
   final List<NoteItemWidget> notes = [
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: const Color(0xffFFCC80)),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.yellowAccent),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.greenAccent),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.greenAccent),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.greenAccent),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.greenAccent),
     ),
     NoteItemWidget(
-      note: Note(
+      note: NoteMD(
           title: 'Flutter Tips',
-          description: 'build you career with tharwat samy',
+          content: 'build you career with tharwat samy',
           dateTime:
               '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}  ${DateTime.now().hour}:${DateTime.now().minute}',
           color: Colors.greenAccent),

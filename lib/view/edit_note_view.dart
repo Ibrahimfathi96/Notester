@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notester/view/notes_view.dart';
 import 'package:notester/view/widgets/custom_search_icon.dart';
 import 'package:notester/view/widgets/edit_note_view_body.dart';
 
@@ -15,8 +16,11 @@ class EditNoteView extends StatelessWidget {
           'Edit Note',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.w300),
         ),
-        actions: const [
-          CustomSearchIcon(
+        actions:  [
+          CustomAppBarIcon(
+            onPressed: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NotesView(),));
+            },
             iconData: Icons.check,
           )
         ],
