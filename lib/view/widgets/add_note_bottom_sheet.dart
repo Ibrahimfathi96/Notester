@@ -10,18 +10,63 @@ class AddNoteBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: SingleChildScrollView(
-        child: Column(
-          children: const [
-            SizedBox(height: 32,),
-            TextFieldWidget(hintText: 'title',),
-            SizedBox(height: 20,),
-            TextFieldWidget(hintText: 'content', maxLines: 5,),
-            SizedBox(height: 50,),
-            ButtonWidget(),
-            SizedBox(height: 20,),
-          ],
-        ),
+      child: SingleChildScrollView(child: _AddNoteForm()),
+    );
+  }
+}
+
+class _AddNoteForm extends StatefulWidget {
+  @override
+  State<_AddNoteForm> createState() => _AddNoteFormState();
+}
+
+class _AddNoteFormState extends State<_AddNoteForm> {
+  String? title, content;
+  final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: formKey,
+      autovalidateMode: autoValidateMode,
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 32,
+          ),
+          TextFieldWidget(
+            onSaved: (value) {
+              title = value;
+            },
+            hintText: 'title',
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          TextFieldWidget(
+            onSaved: (value) {
+              content = value;
+            },
+            hintText: 'content',
+            maxLines: 5,
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          ButtonWidget(
+            onTap:(){
+              if(formKey.currentState!.validate()){
+                formKey.currentState!.save();
+              }else{
+                autoValidateMode = AutovalidateMode.always;
+                setState(() {});
+              }
+            },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+        ],
       ),
     );
   }
