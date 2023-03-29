@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notester/constants.dart';
 import 'package:notester/view/edit_note_view.dart';
 
-import '../../models/note_model.dart';
-
 class NoteItemWidget extends StatelessWidget {
-  final NoteMD note;
-  const NoteItemWidget({Key? key, required this.note}) : super(key: key);
+  const NoteItemWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,32 +43,32 @@ class NoteItemWidget extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             width: double.infinity,
             decoration: BoxDecoration(
-                color: Color(note.color), borderRadius: BorderRadius.circular(20)),
+                color: Color(kPrimaryColor.value), borderRadius: BorderRadius.circular(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 12.0),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 12.0),
                   child: Text(
-                    note.title,
-                    style: const TextStyle(
+                    'Flutter Tips',
+                    style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 26,
                         color: Colors.black),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 6.0),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 6.0),
                   child: Text(
-                    note.content,
-                    style: const TextStyle(
+                    'Build Your Career With Tharwat Samy',
+                    style: TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 20,
                         color: Colors.black54),
                   ),
                 ),
-                Text(note.dateTime.toString(),
+                Text(DateTime.now().toString(),
                     textAlign: TextAlign.end,
                     style: const TextStyle(
                         fontWeight: FontWeight.w300,
