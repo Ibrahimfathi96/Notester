@@ -21,6 +21,10 @@ class NotesView extends StatelessWidget {
         ],
       ),
       body: NotesViewBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: const Icon(Icons.add,size: 36,),
+      ),
     );
   }
 }
