@@ -12,41 +12,38 @@ class NotesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          title: const Text('Notes',
-            style: TextStyle(
-                fontSize: 28, fontWeight: FontWeight.w300
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: const Text('Notes',
+          style: TextStyle(
+              fontSize: 28, fontWeight: FontWeight.w300
           ),
-          actions: [
-            CustomAppBarIcon(
-              onPressed: () {},
-              iconData: Icons.search_outlined,)
-          ],
         ),
-        body: const NotesViewBody(),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: kPrimaryColor,
-          onPressed: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20)
-                  )
-              ),
-              context: context, builder: (context) {
-              return const AddNoteBottomSheet();
-            },);
-          },
-          child: const Icon(Icons.add, size: 36,),
-        ),
+        actions: [
+          CustomAppBarIcon(
+            onPressed: () {},
+            iconData: Icons.search_outlined,)
+        ],
+      ),
+      body: const NotesViewBody(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimaryColor,
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)
+                )
+            ),
+            context: context, builder: (context) {
+            return const AddNoteBottomSheet();
+          },);
+        },
+        child: const Icon(Icons.add, size: 36,),
       ),
     );
   }
