@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:notester/constants.dart';
 import 'package:notester/models/note_model.dart';
 import 'package:notester/view/edit_note_view.dart';
 
@@ -31,7 +30,9 @@ class NoteItemWidget extends StatelessWidget {
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     bottomLeft: Radius.circular(20)),
-                onPressed: (context) {},
+                onPressed: (context) {
+                  noteMD.delete();
+                },
                 backgroundColor: const Color(0xFFFE4A49),
                 foregroundColor: Colors.black,
                 icon: FontAwesomeIcons.trash,
@@ -44,7 +45,7 @@ class NoteItemWidget extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             width: double.infinity,
             decoration: BoxDecoration(
-                color: Color(kPrimaryColor.value), borderRadius: BorderRadius.circular(20)),
+                color: Color(noteMD.color), borderRadius: BorderRadius.circular(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
