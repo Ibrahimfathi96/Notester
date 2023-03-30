@@ -23,13 +23,13 @@ class _EditNoteBodyWidgetState extends State<EditNoteBodyWidget> {
             onChanged:(value){
               widget.noteMD.title = value;
             },
-            hintText: 'title',),
+            hintText: widget.noteMD.title,),
           const SizedBox(height: 20,),
           TextFieldWidget(
             onChanged: (value){
               widget.noteMD.content = value;
             },
-            hintText: 'content', maxLines: 5,),
+            hintText: widget.noteMD.content, maxLines: 5,),
         ],
       ),
     );

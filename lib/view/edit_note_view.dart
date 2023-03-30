@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notester/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notester/models/note_model.dart';
 import 'package:notester/view/notes_view.dart';
 import 'package:notester/view/widgets/custom_search_icon.dart';
@@ -31,6 +33,7 @@ class _EditNoteViewState extends State<EditNoteView> {
               widget.noteMD.title = title ?? widget.noteMD.title;
               widget.noteMD.content = content ?? widget.noteMD.content;
               widget.noteMD.save();
+              BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NotesView(),));
             },
             iconData: Icons.check,
