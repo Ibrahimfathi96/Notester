@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notester/constants.dart';
-import 'package:notester/cubit/notes_cubit/notes_cubit.dart';
 import 'package:notester/view/widgets/add_note_bottom_sheet.dart';
 import 'package:notester/view/widgets/custom_search_icon.dart';
 import 'package:notester/view/widgets/notes_view_body.dart';
+
+import '../cubits/notes_cubit/notes_cubit.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({Key? key}) : super(key: key);

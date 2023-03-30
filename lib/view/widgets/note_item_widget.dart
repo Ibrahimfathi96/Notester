@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notester/constants.dart';
+import 'package:notester/models/note_model.dart';
 import 'package:notester/view/edit_note_view.dart';
 
 class NoteItemWidget extends StatelessWidget {
-  const NoteItemWidget({Key? key}) : super(key: key);
-
+  const NoteItemWidget({Key? key, required this.noteMD}) : super(key: key);
+  final NoteMD noteMD;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -48,32 +49,32 @@ class NoteItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 12.0),
+                 Padding(
+                  padding: const EdgeInsets.only(bottom: 12.0),
                   child: Text(
-                    'Flutter Tips',
-                    style: TextStyle(
+                    noteMD.title,
+                    style: const TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 26,
                         color: Colors.black),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 6.0),
+                 Padding(
+                  padding: const EdgeInsets.only(bottom: 6.0),
                   child: Text(
-                    'Build Your Career With Tharwat Samy',
+                    noteMD.content,
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 20,
-                        color: Colors.black54),
+                        color: Colors.black.withOpacity(.6)),
                   ),
                 ),
-                Text(DateTime.now().toString(),
+                Text(noteMD.dateTime,
                     textAlign: TextAlign.end,
-                    style: const TextStyle(
+                    style:TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 16,
-                        color: Colors.black54))
+                        color: Colors.black.withOpacity(.6)))
               ],
             ),
           ),

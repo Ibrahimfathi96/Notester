@@ -7,7 +7,7 @@ class ButtonWidget extends StatelessWidget {
   final bool isLoading;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
