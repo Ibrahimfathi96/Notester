@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:notester/models/note_model.dart';
 import 'package:notester/view/notes_view.dart';
 import 'package:notester/view/widgets/custom_search_icon.dart';
 import 'package:notester/view/widgets/edit_note_view_body.dart';
 
-class EditNoteView extends StatelessWidget {
-  const EditNoteView({Key? key}) : super(key: key);
+class EditNoteView extends StatefulWidget {
+  const EditNoteView({Key? key, required this.noteMD}) : super(key: key);
+  final NoteMD noteMD;
+
+  @override
+  State<EditNoteView> createState() => _EditNoteViewState();
+}
+
+class _EditNoteViewState extends State<EditNoteView> {
+  String? title,content;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +28,16 @@ class EditNoteView extends StatelessWidget {
         actions:  [
           CustomAppBarIcon(
             onPressed: (){
+              widget.noteMD.title = title ?? widget.noteMD.title;
+              widget.noteMD.content = content ?? widget.noteMD.content;
+              widget.noteMD.save();
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NotesView(),));
             },
             iconData: Icons.check,
           )
         ],
       ),
-      body: const EditNoteBodyWidget(),
+      body: EditNoteBodyWidget(noteMD: widget.noteMD,),
     );
   }
 }
