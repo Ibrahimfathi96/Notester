@@ -1,16 +1,7 @@
-# notester
+Notester is a Notes Application built with dart and Flutter
+Here's a link for the App's demo:https://drive.google.com/file/d/175QG7Ljc3oA1HTQX5mR8U2zlqt_Nr_Y0/view?usp=share_link
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Notes App supports adding, editing and deleting notes with beatiful colors palette 
+- UI Design
+- Local Hive Database
+- cubit as state management
