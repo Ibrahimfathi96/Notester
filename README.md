@@ -4,7 +4,7 @@ Here's a link for the App's demo:
 
 (Photos) https://drive.google.com/drive/folders/19D2f6QbIEGnr3GOaUBBEYMYgKx1t5ur6?usp=share_link
 
-Notes App supports adding, editing and deleting notes with beatiful colors palette 
+Notes App supports adding, editing and deleting notes with beautiful colors palette. 
 - UI Design
 - Local Hive Database
 - cubit as state management
